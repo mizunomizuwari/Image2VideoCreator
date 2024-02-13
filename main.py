@@ -44,10 +44,12 @@ image_frame_pairs = [
     ('image_src/image7.jpg', 10),
     ('image_src/image8.jpg', 10),
 ]
+# 出力先ファイルパス
 file_name = "output_video.mp4"
+# 出力ファイルのフレームレート
 fps = 20
+# image_frame_pairsの書き込みを繰り返す回数
 loop_count=3
-
 
 # ~~~~~~~~~~~設定部分ここまで~~~~~~~~~~~~
 
