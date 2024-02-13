@@ -2,7 +2,8 @@ import cv2
 
 
 def create_video(image_frame_pairs, output_video_path, fps=20, loop_count=1):
-    fitst_image = cv2.imread(image_frame_pairs[0][0])
+    fitst_image_path = image_frame_pairs[0][0]
+    fitst_image = cv2.imread(fitst_image_path)
     height, width, _ = fitst_image.shape
     
     # 全ての画像のサイズが同じ大きさかチェックする
@@ -10,7 +11,7 @@ def create_video(image_frame_pairs, output_video_path, fps=20, loop_count=1):
         image = cv2.imread(image_path)
         height_temp, width_temp, _ = image.shape
         if height != height_temp or width != width_temp:
-            print("画像のサイズが一致しません:", fitst_image, "と", image_path)
+            print("画像のサイズが一致しません:", fitst_image_path, "と", image_path)
             return 
 
     # 動画フォーマット設定
@@ -42,6 +43,7 @@ image_frame_pairs = [
     ('image_src/image6.jpg', 10),
     ('image_src/image7.jpg', 10),
     ('image_src/image8.jpg', 10),
+    ('image_src/image9.jpg', 10),
 ]
 file_name = "output_video.mp4"
 fps = 20
