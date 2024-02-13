@@ -43,7 +43,6 @@ image_frame_pairs = [
     ('image_src/image6.jpg', 10),
     ('image_src/image7.jpg', 10),
     ('image_src/image8.jpg', 10),
-    ('image_src/image9.jpg', 10),
 ]
 file_name = "output_video.mp4"
 fps = 20
